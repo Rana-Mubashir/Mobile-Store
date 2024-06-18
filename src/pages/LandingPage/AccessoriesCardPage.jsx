@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import AccessoriesCom from '../components/AccessoriesCom';
+import AccessoriesCom from '../../components/AccessoriesCom';
 import { useSelector } from 'react-redux';
 
 function AccessoriesCardPage() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Models from '../components/ModelsCom'
+import Models from '../../components/ModelsCom'
 function ModelsPage() {
 
     const data = ['Samsung', 'Iphone', 'Lenovo', 'Vivo', 'Itel', 'Nokia'];

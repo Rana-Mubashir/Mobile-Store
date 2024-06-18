@@ -1,5 +1,5 @@
 import React from 'react'
-import AccessoriesBar from '../components/AccessoriesBar'
+import AccessoriesBar from '../../components/AccessoriesBar'
 
 function AccessoriesBarPage() {
     const categories = ["New Arrival", "Best Seller", "Featured Products"]

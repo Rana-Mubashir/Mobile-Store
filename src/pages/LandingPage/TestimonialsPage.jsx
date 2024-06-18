@@ -1,5 +1,5 @@
 import React from 'react'
-import TestimonialsCom from '../components/TestimonialsCom'
+import TestimonialsCom from '../../components/TestimonialsCom'
 function TestimonialsPage() {
     const testimonials = [
         {

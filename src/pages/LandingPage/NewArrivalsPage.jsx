@@ -1,5 +1,5 @@
 import React from 'react'
-import NewArrivalsCom from '../components/NewArrivalsCom'
+import NewArrivalsCom from '../../components/NewArrivalsCom'
 
 function NewArrivalsPage() {
   return (

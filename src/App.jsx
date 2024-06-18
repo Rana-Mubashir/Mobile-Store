@@ -1,24 +1,36 @@
 import React from 'react'
-import ModelsPage from './pages/ModelsPage'
-import TestimonialsPage from './pages/TestimonialsPage'
-import AccessoriesBarPage from './pages/AccessoriesBarPage'
-import AccessoriesCardPage from './pages/AccessoriesCardPage'
-import NewArrivalsPage from './pages/NewArrivalsPage'
-import Footer from './components/Footer'
-import NavbarPage from './pages/NavbarPage'
-import Hero from './components/Hero'
+import { Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
+import AppLayout from "./AppLayout";
+import LandingPage from './pages/LandingPage/LandingPage'
+import { RouterProvider } from 'react-router'
+import AboutUs from './pages/AboutUsPage/AboutUs';
+import Cart from './pages/CartPage/Cart';
+import CategoryPage from './pages/CategoryPage/CategoryPage';
+import ContactUs from './pages/ContactUsPage/ContactUs';
+import Checkout from './pages/CheckoutPage/Checkout';
+import SubCategoryPage from './pages/SubCategoryPage/SubCategory';
+import UserDashBoard from './pages/UserDashBoardPage/UserDashBoard';
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<AppLayout/>}>
+      <Route index element={<LandingPage/>} />
+      <Route path='aboutus' element={<AboutUs/>}/>
+      <Route path='contactus' element={<ContactUs/>}/>
+      <Route path="cart" element={<Cart/>} />
+      <Route path="category/:cat" element={<CategoryPage/>} />
+      <Route path="subcategory/:subcat" element={<SubCategoryPage/>} />
+      <Route path="checkout" element={<Checkout/>} />
+      <Route path="dashboard" element={<UserDashBoard/>} />
+    </Route>
+  )
+)
+
+
 function App() {
   return (
-    <div>
-      <NavbarPage />
-      <Hero />
-      <ModelsPage />
-      <AccessoriesBarPage />
-      <AccessoriesCardPage />
-      <NewArrivalsPage />
-      <TestimonialsPage />
-      <Footer />
-    </div>
+    <RouterProvider router={router} />
   )
 }
 export default App
